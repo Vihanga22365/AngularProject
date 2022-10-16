@@ -1,1 +1,13 @@
-<h1>That is Server Component</h1>
+<p [ngStyle]="{ textAlign: 'center', 'margin-top': '2%' }">
+  <span
+    [ngStyle]="{
+      color: 'white',
+      'background-color': getBackgroundColor(),
+      padding: '1%',
+      'border-radius': '10px',
+      'box-shadow': 'rgba(0, 0, 0, 0.24) 0px 3px 8px'
+    }"
+    [ngClass]="{ online: getServerStatus() === 'online' }"
+    >{{ "Server" }} with id {{ serverId }} is currently {{ getServerStatus() }}
+  </span>
+</p>

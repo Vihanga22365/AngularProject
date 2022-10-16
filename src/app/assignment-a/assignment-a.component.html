@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <button class="btn btn-primary" (click)="onToggleParagraph()">
+      Display Details
+    </button>
+  </div>
+  <div class="row">
+    <h4 *ngIf="showStatus">Secreat Password = Tuna</h4>
+  </div>
+  <div class="row">
+    <p
+      [ngClass]="{ logArray: logs.length }"
+      [ngStyle]="{
+        'background-color': 'blue',
+        'margin-top': '1%',
+        'border-radius': '10px',
+        'text-align': 'center',
+        padding: '1%'
+      }"
+      *ngFor="let log of logs; let i = index"
+    >
+      {{ log }} Index is {{ i }}
+    </p>
+  </div>
+</div>
